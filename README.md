@@ -1,4 +1,13 @@
-# Now Playing Plugin for Volumio
+# PHTS NP-01: Now Playing plugin for Volumio
+
+This is a modification of original [volumio-now-playing] which is used by [PHTS NP-01].
+
+Changes:
+
+- Move player buttons to bottom (for 800x480 screen)
+
+<details>
+<summary>README from original repo</summary>
 
 This plugin provides a 'Now Playing' screen for your Volumio device. It is intended for displays that are mainly used to show what Volumio is playing, as opposed to doing things such as browsing media. This makes the plugin suitable for embedded displays that are generally limited in screen estate.
 
@@ -168,7 +177,7 @@ Note: due to changes in the config data schema, style customizations you made in
 - Use colorpicker for color settings
 - Add "Show Album Art" option to Album Art settings
 - Add "Margins", "Alignment (Vertical)" and "Max Lines" options to Text Style settings
-- Add external volume change indicator 
+- Add external volume change indicator
 
 0.1.1
 - Update plugin for Volumio 3 (note the change of category to 'user_interface')
@@ -197,3 +206,7 @@ Note: due to changes in the config data schema, style customizations you made in
 ## License
 
 MIT
+</details>
+
+[volumio-now-playing]: https://github.com/patrickkfkan/volumio-now-playing
+[PHTS NP-01]: https://tsaryk.com/NP-01
