@@ -9,3 +9,7 @@
 .NowPlayingScreen_Layout__OGERh {
   --default-track-info-height: 410px;
 }
+
+.BasicView_TrackInfoText__format__FdrZc {
+  text-align: right;
+}
