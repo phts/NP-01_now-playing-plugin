@@ -17,3 +17,21 @@
 .BasicView_PlayerButtonGroup--vcenter__Txbxs {
   display: none;
 }
+
+.BasicView_PlayerButton--previous__5x2ZG,
+.BasicView_PlayerButton--next__ZZoi4 {
+  display: none;
+}
+.BasicView_PlayerButton--play__5sthr {
+  margin-right: auto;
+  order: -1;
+}
+.BasicView_PlayerButton--play__5sthr::before {
+  border: 0 none;
+}
+.BasicView_PlayerButton--play__5sthr .BasicView_PlayerButton__icon__hfq2b {
+  font-size: 2em;
+}
+.BasicView_PlayerButton__-oJgU {
+  width: 1em;
+}

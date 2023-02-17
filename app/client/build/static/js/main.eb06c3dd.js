@@ -5540,7 +5540,7 @@
                     case "play":
                       r = {
                         key: "play",
-                        icon: "play" === n.status ? n.duration ? "pause" : "stop" : "play_arrow",
+                        icon: "play" === n.status ? n.duration ? "play_arrow" : "stop" : "pause",
                         styles: c("play"),
                         onClick: i
                       };
