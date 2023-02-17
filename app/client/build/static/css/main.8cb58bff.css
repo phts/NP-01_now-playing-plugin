@@ -39,3 +39,7 @@
 .NowPlayingScreen_Layout__OGERh {
   padding: 10px;
 }
+
+.BasicView_PlayerButton--stop-status {
+  color: #555;
+}

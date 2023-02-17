@@ -5538,10 +5538,17 @@
                       };
                       break;
                     case "play":
+                      const playStyles = c("play")
                       r = {
                         key: "play",
-                        icon: "play" === n.status ? "play_arrow" : "",
-                        styles: c("play"),
+                        icon: "play_arrow",
+                        styles: {
+                          ...playStyles,
+                          extraClassNames: [
+                            ...playStyles.extraClassNames,
+                            `BasicView_PlayerButton--${n.status==="play" ? "play" : "stop"}-status`
+                          ]
+                        },
                         onClick: i
                       };
                       break;
