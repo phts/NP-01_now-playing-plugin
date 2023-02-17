@@ -5522,7 +5522,7 @@
                     case "repeat":
                       r = {
                         key: "repeat",
-                        icon: n.repeatSingle ? "repeat_one" : "repeat",
+                        icon: n.duration ?  n.repeatSingle ? "repeat_one" : "repeat" : "",
                         styles: c("repeat"),
                         toggleable: !0,
                         toggled: n.repeat,
@@ -5564,7 +5564,7 @@
                     case "random":
                       r = {
                         key: "random",
-                        icon: "shuffle",
+                        icon: n.duration ? "shuffle" : "",
                         styles: c("random"),
                         toggleable: !0,
                         toggled: n.random,
