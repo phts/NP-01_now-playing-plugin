@@ -10,6 +10,15 @@ Changes:
 - Redesign/reorder player buttons
 - [...and more](https://github.com/phts/NP-01_now-playing-plugin/commits/master)
 
+## Usage
+
+Replace files form this repo:
+
+- `app/client/build/static/css/main.8cb58bff.css`
+- `app/client/build/static/js/main.eb06c3dd.js`
+
+on Volumio device: `/data/plugins/user_interface/now_playing/`
+
 <details>
 <summary>README from original repo</summary>
 
