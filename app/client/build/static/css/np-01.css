@@ -1,0 +1,94 @@
+.App .NowPlayingScreen_Layout__OGERh {
+  --track-info-height: 410px;
+  --seekbar-height: 30px;
+  --seekbar-text-font-size: 18px;
+}
+
+.App .BasicView_TrackInfoText__format__FdrZc {
+  text-align: right;
+}
+
+.App .BasicView_PlayerButtonGroup--vcenter__Txbxs {
+  display: none;
+}
+
+.App .BasicView_PlayerButton--previous__5x2ZG,
+.App .BasicView_PlayerButton--next__ZZoi4 {
+  display: none;
+}
+
+.App .BasicView_PlayerButton--play__5sthr {
+  margin-right: auto;
+  order: -1;
+}
+
+.App .BasicView_PlayerButton--play__5sthr::before {
+  border: 0 none;
+}
+
+.App .BasicView_PlayerButton--play__5sthr .BasicView_PlayerButton__icon__hfq2b {
+  font-size: 3em;
+}
+
+.App .BasicView_PlayerButton__-oJgU {
+  width: 1em;
+}
+
+.App .NowPlayingScreen_Layout__OGERh {
+  padding: 10px;
+}
+
+.App .BasicView_PlayerButton--stop-status {
+  color: #555;
+}
+
+.App .BasicView_MainContents__etl5j {
+  font-weight: normal;
+}
+
+.App .BasicView_Seekbar__uBQsU {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--seekbar-height);
+}
+
+.App .BasicView_Seekbar__slider__\+oHKo {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.App .BasicView_Seekbar__slider__\+oHKo .rc-slider-rail {
+  background-color: var(--background-color);
+  margin-left: 0;
+  width: 100%;
+}
+
+.App .BasicView_Seekbar__slider__\+oHKo .rc-slider-rail::after,
+.App .BasicView_Seekbar__slider__\+oHKo .rc-slider-rail::before {
+  display: none;
+}
+
+.App .BasicView_Seekbar__slider__\+oHKo .rc-slider-handle {
+  display: none;
+}
+
+.App .BasicView_Seekbar__seek__Ik5h2,
+.App .BasicView_Seekbar__duration__A9Fmh {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 4px;
+  ;
+  position: absolute;
+  top: 0;
+}
+
+.App .BasicView_Seekbar__seek__Ik5h2 {
+  margin-left: 8px;
+}
+
+.App .BasicView_Seekbar__duration__A9Fmh {
+  right: 0;
+  margin-right: 8px;
+}

@@ -14,6 +14,7 @@ Changes:
 
 Replace files form this repo:
 
+- `app/client/build/static/css/np-01.css`
 - `app/client/build/static/css/main.8cb58bff.css`
 - `app/client/build/static/js/main.eb06c3dd.js`
 
