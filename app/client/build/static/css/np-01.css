@@ -1,7 +1,27 @@
 .App .NowPlayingScreen_Layout__OGERh {
-  --track-info-height: 410px;
+  --album-font-color: #ffffff;
+  --album-font-size: 24px;
+  --albumart-height: 400px;
+  --albumart-width: 400px;
+  --artist-font-color: #e69017;
+  --artist-font-size: 30px;
+  --artist-margin: -10px 0 10px 0;
+  --max-album-lines: 1;
+  --max-artist-lines: 1;
+  --max-title-lines: 3;
+  --media-info-font-color: #CCCCCC;
+  --media-info-font-size: 16px;
+  --media-info-margin: auto 0 0 0;
+  --metadata-font-color: #CCCCCC;
+  --seek-time-font-color: #ffffff;
   --seekbar-height: 30px;
   --seekbar-text-font-size: 18px;
+  --title-font-color: #ffffff;
+  --title-font-size: 34px;
+  --title-margin: 0 0 15px 0;
+  --track-info-height: 410px;
+  --widget-highlight-color: #e69017;
+  --widget-primary-color: #808080;
 }
 
 .App .BasicView_TrackInfoText__format__FdrZc {
