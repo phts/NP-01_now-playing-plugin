@@ -7,7 +7,9 @@
 /*# sourceMappingURL=main.8cb58bff.css.map*/
 
 .NowPlayingScreen_Layout__OGERh {
-  --default-track-info-height: 410px;
+  --track-info-height: 410px;
+  --seekbar-height: 30px;
+  --seekbar-text-font-size: 18px;
 }
 
 .BasicView_TrackInfoText__format__FdrZc {
@@ -46,4 +48,43 @@
 
 .BasicView_MainContents__etl5j {
   font-weight: normal;
+}
+
+.BasicView_Seekbar__uBQsU {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--seekbar-height);
+}
+.BasicView_Seekbar__slider__\+oHKo {
+  margin-bottom: 0;
+  width: 100%;
+}
+.BasicView_Seekbar__slider__\+oHKo .rc-slider-rail {
+  background-color: var(--background-color);
+  margin-left: 0;
+  width: 100%;
+}
+.BasicView_Seekbar__slider__\+oHKo .rc-slider-rail::after,
+.BasicView_Seekbar__slider__\+oHKo .rc-slider-rail::before {
+  display: none;
+}
+.BasicView_Seekbar__slider__\+oHKo .rc-slider-handle {
+  display: none;
+}
+.BasicView_Seekbar__seek__Ik5h2,
+.BasicView_Seekbar__duration__A9Fmh {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 4px;;
+  position: absolute;
+  top: 0;
+}
+.BasicView_Seekbar__seek__Ik5h2 {
+  margin-left: 8px;
+}
+.BasicView_Seekbar__duration__A9Fmh {
+  right: 0;
+  margin-right: 8px;
 }
