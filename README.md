@@ -10,7 +10,6 @@ Changes:
 - Redesign/reorder player buttons
 - [...and more](https://github.com/phts/NP-01_now-playing-plugin/commits/master)
 
-
 <details>
 <summary>Screenshots</summary>
 
@@ -20,15 +19,16 @@ Changes:
 
 </details>
 
-## Usage
+## Install
 
-Replace files form this repo:
+1. Install "Now PLaying" plugin version 0.3.7
+2. Copy files from this repo:
 
-- `app/client/build/static/css/np-01.css`
-- `app/client/build/static/css/main.8cb58bff.css`
-- `app/client/build/static/js/main.eb06c3dd.js`
+   - `app/client/build/static/css/np-01.css`
+   - `app/client/build/static/css/main.8cb58bff.css`
+   - `app/client/build/static/js/main.eb06c3dd.js`
 
-on Volumio device: `/data/plugins/user_interface/now_playing/`
+   to folder `/data/plugins/user_interface/now_playing/` on Volumio device.
 
 <details>
 <summary>README from original repo</summary>
