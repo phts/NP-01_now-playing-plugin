@@ -6702,6 +6702,7 @@
         var t = z().host,
           n = e.playerState,
           o = n.title || "",
+          pos = typeof n.position !== 'undefined' ? String(n.position + 1).padStart(2, '0') + '. ': '',
           a = n.artist || "",
           i = n.album || "",
           s = function(e) {
@@ -6770,7 +6771,7 @@
               case "title":
                 return (0, p.jsx)("span", {
                   className: v("title"),
-                  children: o
+                  children: pos + o
                 }, e);
               case "artist":
                 if (l) {
