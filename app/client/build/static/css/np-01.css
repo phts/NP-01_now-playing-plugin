@@ -28,6 +28,10 @@
   text-align: right;
 }
 
+.BasicView_TrackInfoText__title__tjGPF {
+  hyphens: auto;
+}
+
 .App .BasicView_PlayerButtonGroup--vcenter__Txbxs {
   display: none;
 }
