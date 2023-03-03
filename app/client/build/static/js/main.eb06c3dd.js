@@ -6708,9 +6708,9 @@
           s = function(e) {
             if ("webradio" === e.trackType) return e.bitrate;
             var t = [];
-            return ["bitdepth", "samplerate"].forEach((function(n) {
+            return ["bitrate", "bitdepth", "samplerate"].forEach((function(n) {
               e[n] && t.push(e[n])
-            })), t.join(" ")
+            })), t.join(", ")
           }(n),
           u = function(e, t) {
             if (!e) return null;
