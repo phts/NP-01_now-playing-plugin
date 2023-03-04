@@ -116,3 +116,7 @@
   right: 0;
   margin-right: 8px;
 }
+
+.VolumeIndicatorPanelOverlay {
+  display: none !important;
+}
