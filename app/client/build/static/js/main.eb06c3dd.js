@@ -6702,10 +6702,11 @@
         var t = z().host,
           n = e.playerState,
           o = n.title || "",
-          pos = (n.trackType !== "webradio" && typeof n.position !== 'undefined') ? String(n.position + 1).padStart(2, '0') + '. ': '',
+          pos = (n.trackType !== "webradio" && typeof n.position !== 'undefined') ? `${String(n.position + 1).padStart(2, '0')} - `: '',
           a = n.artist || "",
           i = n.album || "",
           year = n.year ? ` (${n.year})` : "",
+          tracknumber = n.tracknumber,
           s = function(e) {
             if ("webradio" === e.trackType) return e.bitrate;
             var t = [];
@@ -6772,7 +6773,7 @@
               case "title":
                 return (0, p.jsx)("span", {
                   className: v("title"),
-                  children: pos + o
+                  children: tracknumber ? o : pos + o
                 }, e);
               case "artist":
                 if (l) {
