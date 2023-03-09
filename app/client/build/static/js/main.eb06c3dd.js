@@ -6705,6 +6705,7 @@
           pos = (n.trackType !== "webradio" && typeof n.position !== 'undefined') ? String(n.position + 1).padStart(2, '0') + '. ': '',
           a = n.artist || "",
           i = n.album || "",
+          year = n.year ? ` (${n.year})` : "",
           s = function(e) {
             if ("webradio" === e.trackType) return e.bitrate;
             var t = [];
@@ -6788,7 +6789,7 @@
               case "album":
                 return l ? null : (0, p.jsx)("span", {
                   className: v("album"),
-                  children: i
+                  children: i + year
                 }, e);
               case "mediaInfo":
                 return (0, p.jsxs)("div", {
