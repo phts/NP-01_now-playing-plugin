@@ -10,14 +10,9 @@ Changes:
 - Redesign/reorder player buttons
 - [...and more](https://github.com/phts/NP-01_now-playing-plugin/commits/master)
 
-<details>
-<summary>Screenshots</summary>
-
 ![Initial screen](./docs/initial.png)
 
 ![Playing track screen](./docs/playing.png)
-
-</details>
 
 ## Install
 
