@@ -6702,7 +6702,7 @@
         var t = z().host,
           n = e.playerState,
           o = n.title || "",
-          pos = (n.trackType !== "webradio" && typeof n.position !== 'undefined') ? `${String(n.position + 1).padStart(2, '0')} - `: '',
+          pos = (n.trackType !== "webradio" && n.trackType !== "Podcast" && typeof n.position !== 'undefined') ? `${String(n.position + 1).padStart(2, '0')} - `: '',
           a = n.artist || "",
           i = n.album || "",
           year = n.year ? ` (${n.year})` : "",
