@@ -15,14 +15,8 @@ Noticeable changes:
 
 ## Install
 
-1. Install "Now PLaying" plugin version 0.3.7
-2. Copy files from this repo:
-
-   - `app/client/build/static/css/np-01.css`
-   - `app/client/build/static/css/main.8cb58bff.css`
-   - `app/client/build/static/js/main.eb06c3dd.js`
-
-   to folder `/data/plugins/user_interface/now_playing/` on Volumio device.
+1. Install "Now PLaying" plugin version 0.3.8
+2. Run `scripts\deploy.sh`
 
 ## Development
 
