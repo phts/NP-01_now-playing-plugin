@@ -6580,7 +6580,7 @@
                               case 'repeat':
                                 r = {
                                   key: 'repeat',
-                                  icon: n.repeatSingle ? 'repeat_one' : 'repeat',
+                                  icon: n.duration ? (n.repeatSingle ? 'repeat_one' : 'repeat') : '',
                                   styles: c('repeat'),
                                   toggleable: !0,
                                   toggled: n.repeat,
@@ -6591,10 +6591,17 @@
                                 r = { key: 'previous', icon: 'skip_previous', styles: c('previous'), onClick: a };
                                 break;
                               case 'play':
+                                const playStyles = c('play');
                                 r = {
                                   key: 'play',
-                                  icon: 'play' === n.status ? (n.duration ? 'pause' : 'stop') : 'play_arrow',
-                                  styles: c('play'),
+                                  icon: 'play_arrow',
+                                  styles: {
+                                    ...playStyles,
+                                    extraClassNames: [
+                                      ...playStyles.extraClassNames,
+                                      `BasicView_PlayerButton--${n.status === 'play' ? 'play' : 'stop'}-status`,
+                                    ],
+                                  },
                                   onClick: i,
                                 };
                                 break;
@@ -6610,7 +6617,7 @@
                               case 'random':
                                 r = {
                                   key: 'random',
-                                  icon: 'shuffle',
+                                  icon: n.duration ? 'shuffle' : '',
                                   styles: c('random'),
                                   toggleable: !0,
                                   toggled: n.random,
@@ -7932,16 +7939,22 @@
           var t = z().host,
             n = e.playerState,
             o = n.title || '',
+            pos =
+              n.trackType !== 'webradio' && n.trackType !== 'Podcast' && typeof n.position !== 'undefined'
+                ? `${String(n.position + 1).padStart(2, '0')} - `
+                : '',
             a = n.artist || '',
             i = n.album || '',
+            year = n.year ? ` (${n.year})` : '',
+            tracknumber = n.tracknumber,
             s = (function (e) {
               if ('webradio' === e.trackType) return e.bitrate;
               var t = [];
               return (
-                ['bitdepth', 'samplerate'].forEach(function (n) {
+                ['bitrate', 'samplerate', 'bitdepth'].forEach(function (n) {
                   e[n] && t.push(e[n]);
                 }),
-                t.join(' ')
+                t.join(', ')
               );
             })(n),
             u = (function (e, t) {
@@ -8004,7 +8017,14 @@
             g = f.map(function (e) {
               switch (e) {
                 case 'title':
-                  return (0, p.jsx)('span', { className: v('title'), children: o }, e);
+                  return (0, p.jsx)(
+                    'span',
+                    {
+                      className: v('title'),
+                      children: tracknumber ? o : pos + o,
+                    },
+                    e
+                  );
                 case 'artist':
                   if (l) {
                     var t = a;
@@ -8015,7 +8035,16 @@
                   }
                   return (0, p.jsx)('span', { className: v('artist'), children: a }, e);
                 case 'album':
-                  return l ? null : (0, p.jsx)('span', { className: v('album'), children: i }, e);
+                  return l
+                    ? null
+                    : (0, p.jsx)(
+                        'span',
+                        {
+                          className: v('album'),
+                          children: i + year,
+                        },
+                        e
+                      );
                 case 'mediaInfo':
                   return (0,
                   p.jsxs)('div', { className: v('format'), children: [u ? (0, p.jsx)('img', { src: u, className: v('formatIcon'), alt: '' }) : null, (0, p.jsx)('span', { className: v('formatResolution'), children: s })] }, e);
