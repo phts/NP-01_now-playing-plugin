@@ -2,6 +2,13 @@
 
 This is a modification of original [volumio-now-playing] which is used by [PHTS NP-01].
 
+Noticeable changes:
+
+- Redesign/reorder player buttons, progress bar, album art, etc
+- Render year, bitrate, track number
+- Hide all controls on initial screen, leave only default picture, which also changed
+- [...and more][commits]
+
 ![Initial screen](./docs/initial.png)
 
 ![Playing track screen](./docs/playing.png)
