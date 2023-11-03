@@ -1,13 +1,22 @@
 #/usr/bin/env bash
 
+set -ex
+
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+APP_DIR="${SCRIPT_DIR}/.."
 
-CSS_HASH=06ea62db
-JS_HASH=929c90c7
+for arg in "$@"; do
+  if [ "$arg" == "--restart" ]; then
+    NEED_RESTART=true
+  fi
+done
 
-scp "${SCRIPT_DIR}/../app/client/build/static/css/np-01.css" \
-  volumio:/data/plugins/user_interface/now_playing/app/client/build/static/css/
-scp "${SCRIPT_DIR}/../app/client/build/static/css/main.css" \
-  "volumio:/data/plugins/user_interface/now_playing/app/client/build/static/css/main.${CSS_HASH}.css"
-scp "${SCRIPT_DIR}/../app/client/build/static/js/main.js" \
-  "volumio:/data/plugins/user_interface/now_playing/app/client/build/static/js/main.${JS_HASH}.js"
+ssh volumio "rm -rf /data/plugins/user_interface/now_playing/dist"
+
+scp -r "${APP_DIR}/dist" volumio:/data/plugins/user_interface/now_playing/
+# scp "${APP_DIR}/package.json" volumio:/data/plugins/user_interface/now_playing/
+
+if [ "$NEED_RESTART" == "true" ]; then
+  ssh volumio 'sudo systemctl restart volumio'
+  echo "Restarting..."
+fi
