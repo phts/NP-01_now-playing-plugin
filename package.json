@@ -68,7 +68,7 @@
     "md5": "^2.3.0",
     "node-cache": "^5.1.2",
     "node-fetch": "^2.6.9",
-    "now-playing-common": "github:patrickkfkan/volumio-now-playing-common#vu",
+    "now-playing-common": "github:patrickkfkan/volumio-now-playing-common#15a54a371d3ed9057032abdbb8e4a54ead779797",
     "queue": "^6.0.2",
     "semver": "^7.5.4",
     "string-format": "^2.0.0",
