@@ -15,6 +15,8 @@ ssh volumio "rm -rf /data/plugins/user_interface/now_playing/dist"
 
 scp -r "${APP_DIR}/dist" volumio:/data/plugins/user_interface/now_playing/
 # scp "${APP_DIR}/package.json" volumio:/data/plugins/user_interface/now_playing/
+# scp "${APP_DIR}/package-lock.json" volumio:/data/plugins/user_interface/now_playing/
+# ssh volumio 'cd /data/plugins/user_interface/now_playing && npm i'
 
 if [ "$NEED_RESTART" == "true" ]; then
   ssh volumio 'sudo systemctl restart volumio'
