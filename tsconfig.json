@@ -3,9 +3,8 @@
     "rootDir": ".",
     "outDir": ".",
     "resolveJsonModule": true,
-    "composite": true
+    "composite": true,
+    "sourceMap": false
   },
-  "files": [
-    "package.json"
-  ]
+  "files": ["package.json"]
 }
