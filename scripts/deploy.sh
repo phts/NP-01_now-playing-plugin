@@ -9,7 +9,14 @@ for arg in "$@"; do
   if [ "$arg" == "--restart" ]; then
     NEED_RESTART=true
   fi
+  if [ "$arg" == "--no-build" ]; then
+    NO_BUILD=true
+  fi
 done
+
+if [ "${NO_BUILD}" != "true" ]; then
+  "${SCRIPT_DIR}/build.sh"
+fi
 
 ssh volumio "rm -rf /data/plugins/user_interface/now_playing/dist"
 
