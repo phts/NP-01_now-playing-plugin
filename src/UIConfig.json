@@ -4335,6 +4335,10 @@
           },
           "options": [
             {
+              "value": "phtsNp01", 
+              "label": "PHTS NP-01"
+            },
+            {
               "value": "default", 
               "label": "TRANSLATE.NOW_PLAYING_DEFAULT"
             },

@@ -1355,11 +1355,14 @@ class ControllerNowPlaying {
       label: ''
     };
     switch (theme.active) {
+      case 'default':
+        extraScreensUIConf.content.theme.value.label = np.getI18n('NOW_PLAYING_DEFAULT');
+        break;
       case 'glass':
         extraScreensUIConf.content.theme.value.label = np.getI18n('NOW_PLAYING_GLASS');
         break;
       default:
-        extraScreensUIConf.content.theme.value.label = np.getI18n('NOW_PLAYING_DEFAULT');
+        extraScreensUIConf.content.theme.value.label = 'PHTS NP-01';
     }
 
     /**
