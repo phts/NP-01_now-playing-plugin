@@ -12,6 +12,9 @@ for arg in "$@"; do
   if [ "$arg" == "--no-build" ]; then
     NO_BUILD=true
   fi
+  if [ "$arg" == "--clean-cache" ]; then
+    CLEAN_CACHE=true
+  fi
 done
 
 if [ "${NO_BUILD}" != "true" ]; then
@@ -24,6 +27,10 @@ scp -r "${APP_DIR}/dist" volumio:/data/plugins/user_interface/now_playing/
 scp "${APP_DIR}/package.json" volumio:/data/plugins/user_interface/now_playing/
 scp "${APP_DIR}/package-lock.json" volumio:/data/plugins/user_interface/now_playing/
 ssh volumio 'cd /data/plugins/user_interface/now_playing && npm i'
+
+if [ "$CLEAN_CACHE" == "true" ]; then
+  ssh volumio 'sudo rm -rf /data/volumiokiosk/Default/Cache'
+fi
 
 if [ "$NEED_RESTART" == "true" ]; then
   ssh volumio 'sudo systemctl restart volumio'
