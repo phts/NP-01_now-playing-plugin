@@ -15,6 +15,9 @@ for arg in "$@"; do
   if [ "$arg" == "--clean-cache" ]; then
     CLEAN_CACHE=true
   fi
+  if [ "$arg" == "--reboot" ]; then
+    NEED_REBOOT=true
+  fi
 done
 
 if [ "${NO_BUILD}" != "true" ]; then
@@ -31,8 +34,11 @@ ssh volumio 'cd /data/plugins/user_interface/now_playing && npm i'
 if [ "$CLEAN_CACHE" == "true" ]; then
   ssh volumio 'sudo rm -rf /data/volumiokiosk/Default/Cache'
 fi
-
 if [ "$NEED_RESTART" == "true" ]; then
   ssh volumio 'sudo systemctl restart volumio'
   echo "Restarting..."
+fi
+if [ "$NEED_REBOOT" == "true" ]; then
+  ssh volumio 'sudo reboot'
+  echo "Rebooting..."
 fi
