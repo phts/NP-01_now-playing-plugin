@@ -1,6 +1,6 @@
 # PHTS NP-01: Now Playing plugin for Volumio
 
-This is a modification of original [volumio-now-playing] which is used by [PHTS NP-01].
+This is a modification of [volumio-now-playing] plugin which is used by [PHTS NP-01].
 
 ![Initial screen](./docs/initial.png)
 
