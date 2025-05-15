@@ -1,6 +1,6 @@
 {
   "name": "now_playing",
-  "version": "0.7.5-phts-np-01",
+  "version": "0.7.6-phts-np-01",
   "description": "Provides a 'Now Playing' screen for your Volumio device.",
   "main": "./dist/index.js",
   "scripts": {
