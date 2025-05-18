@@ -1908,9 +1908,8 @@ class ControllerNowPlaying {
     }
     apply.myBackgroundRandomRefreshInterval = apply.myBackgroundRandomRefreshInterval ? parseInt(apply.myBackgroundRandomRefreshInterval, 10) : 10;
     apply.unsplashRefreshInterval = data.unsplashRefreshInterval ? parseInt(apply.unsplashRefreshInterval, 10) : 10;
-    if (apply.waitTime < 10) {
-      np.toast('error', np.getI18n('NOW_PLAYING_ERR_IDLE_SCREEN_WAIT_TIME'));
-      return;
+    if (apply.waitTime < 0) {
+      apply.waitTime = 0;
     }
     if (apply.myBackgroundImage === '/SEPARATOR/') {
       np.toast('error', np.getI18n('NOW_PLAYING_ERR_INVALID_BACKGROUND'));
@@ -2168,6 +2167,10 @@ class ControllerNowPlaying {
     // Push localization settings
     np.getLogger().info('[now-playing] Volumio language changed - pushing localization settings');
     this.#notifyCommonSettingsUpdated(CommonSettingsCategory.Localization);
+  }
+
+  manuallyShowIdleScreen({visible}: {visible: boolean}) {
+    np.broadcastMessage('nowPlayingManuallyShowIdleScreen', visible);
   }
 }
 
